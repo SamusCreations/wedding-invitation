@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La boda de JuanPa & Raque</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green: "#4b4e36",
+              lightGreen: "#848565",
+              ivory: "#f2ede0",
+            },
+          },
+        },
+        fontFamily: {
+          extend: {
+            sans: ["LouisGeorgeCafe", "sans-serif"],
+            serif: ["Koolegant", "serif"],
+            custom: ["Koolegant", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <header class="bg-green fixed top-0 left-0 right-0 z-50">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#">
+            <span class="sr-only">La boda de JuanPa & Raque</span>
+            <img
+              class="h-10 w-auto"
+              src="/images/favicon.png"
+              alt="La boda de JuanPa & Raque"
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            id="openMenuBtn"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >inicio</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >Detalles</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >rsvp</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >nosotros</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >galería</a
+          >
+          <a
+            href="#"
+            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
+            >q&a</a
+          >
+        </div>
+      </nav>
+
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div id="mobileMenu" class="hidden lg:hidden fixed inset-0 z-10">
+        <div class="fixed inset-0 z-10 bg-gray-900 opacity-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-green px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">La boda de JuanPa & Raque</span>
+              <img
+                class="h-10 w-auto"
+                src="/images/favicon.png"
+                alt="logo de La boda de JuanPa & Raque"
+              />
+            </a>
+            <button
+              id="closeMenuBtn"
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-100"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >inicio</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >Detalles</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >rsvp</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >nosotros</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >galería</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  >q&a</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      style="background-image: url(images/inicio.jpg)"
+      class="relative grid min-h-screen bg-no-repeat bg-center bg-cover bg-fixed px-6 py-24 sm:py-32 lg:px-8"
+    >
+      <div class="min-h-screen absolute inset-0 bg-black/50 z-0"></div>
+      <div class="flex justify-center items-end z-10">
+        <img
+          class="h-auto w-auto max-h-56"
+          src="/images/logo_jprq.png"
+          alt=""
+        />
+      </div>
+
+      <div class="flex justify-center items-end z-10">
+        <img class="h-10" src="/images/favicon.png" alt="" />
+      </div>
+    </div>
+
+    <div
+      class="grid min-h-full place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
+    >
+      <div class="text-center text-green">
+        <h1 class="text-3xl uppercase font-bold pb-4">¡Nos vamos a casar!</h1>
+        <p class="text-lg">
+          Y si estás leyendo esto, es porque eres muy importante para
+          nosotros...
+        </p>
+      </div>
+    </div>
+
+    <div class="grid min-h-full bg-lightGreen px-6 py-8 sm:py-16 lg:px-8">
+      <div
+        class="flex flex-row justify-evenly text-ivory uppercase text-center"
+      >
+        <div>
+          <div class="simply-countdown-day text-4xl"></div>
+          <p>Dias</p>
+        </div>
+        <div>
+          <div class="simply-countdown-hour text-4xl"></div>
+          <p>Horas</p>
+        </div>
+        <div>
+          <div class="simply-countdown-minute text-4xl"></div>
+          <p>Minutos</p>
+        </div>
+        <div>
+          <div class="simply-countdown-second text-4xl"></div>
+          <p>Segundos</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid min-h-full place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
+    >
+      <div>
+        <img src="/images/detalles.jpeg" alt="" />
+      </div>
+      <div class="text-center text-green pt-8 uppercase text-xl">
+        <div>
+          <h1 class="text-4xl font-bold pb-4">el gran día</h1>
+          <h3 class="text-lightGreen text-2xl pb-4">detalles</h3>
+          <p class="">jardín else kientzler</p>
+          <p class="">12 diciembre 2024</p>
+          <p class="">9:30 am</p>
+
+          <button class="bg-lightGreen text-ivory p-4 my-6 uppercase">
+            guarda la fecha
+          </button>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="text-2xl">código de vestimenta</h3>
+          <p class="text-lightGreen">cóctel</p>
+          <div class="flex justify-around">
+            <button class="bg-green text-ivory p-4 my-6 uppercase min-w-32">
+              Mujer</button
+            ><button class="bg-green text-ivory p-4 my-6 uppercase min-w-32">
+              Hombre
+            </button>
+          </div>
+          <p class="text-base text-lightGreen">toca los botones para ver la inspiracion de atuendos</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid min-h-full place-items-center bg-green px-6 py-16 sm:py-32 lg:px-8"
+    >
+      <div class="text-center text-ivory">
+        <div class="flex justify-evenly items-center pb-4">
+          <h1 class="text-3xl uppercase font-bold text-[#e0ecc0]">
+            muestras de <span class="text-[#dff2a4]">afecto</span>
+          </h1>
+          <img class="h-40 w-auto" src="/images/favicon.png" alt="" />
+        </div>
+        <p class="text-lg">
+          Hemos sido enormemente bendecidos y ya tenemos casi todo para nuestro
+          nuevo comienzo, por esta razón, si deseas bendecirnos preferimos que
+          sea un regalo en efectivo, en el gran día habrán sobres especialmente
+          para tu detalle, podrás dejarnos un mensaje también. O si lo
+          prefieres, puedes entregarnos el regalo por medio de transferencia o
+          SINPE.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/simplyCountdown.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+
+    <script>
+      var d = new Date("12/12/2024 3:30:00");
+      simplyCountdown(".simply-countdown-one", {
+        year: d.getFullYear(),
+        month: d.getMonth(),
+        day: d.getDate(),
+        hours: d.getHours(),
+        minutes: d.getMinutes(),
+        seconds: d.getSeconds(),
+      });
+    </script>
+  </body>
+</html>

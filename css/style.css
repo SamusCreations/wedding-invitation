@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "LouisGeorgeCafe";
+    src: url("/fonts/louis_george_cafe/Louis\ George\ Cafe.ttf")
+      format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Koolegant";
+    src: url("/fonts/koolegant/Koolegant.ttf")
+      format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
