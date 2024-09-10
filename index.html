@@ -32,10 +32,10 @@
   <body>
     <header class="bg-green fixed top-0 left-0 right-0 z-50">
       <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6"
+        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6 text-ivory uppercase"
         aria-label="Global"
       >
-        <div class="flex lg:flex-1">
+        <div class="flex md:flex-1">
           <a href="#">
             <span class="sr-only">La boda de JuanPa & Raque</span>
             <img
@@ -45,11 +45,11 @@
             />
           </a>
         </div>
-        <div class="flex lg:hidden">
+        <div class="flex md:hidden">
           <button
             id="openMenuBtn"
             type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-ivory"
           >
             <span class="sr-only">Open main menu</span>
             <svg
@@ -68,42 +68,21 @@
             </svg>
           </button>
         </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >inicio</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >Detalles</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >rsvp</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >nosotros</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >galería</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-gray-100 uppercase"
-            >q&a</a
-          >
+        <div class="hidden md:flex md:gap-x-12">
+          <a href="#" class="text-sm font-semibold leading-6">inicio</a>
+          <a href="#" class="text-sm font-semibold leading-6">Detalles</a>
+          <a href="#" class="text-sm font-semibold leading-6">rsvp</a>
+          <a href="#" class="text-sm font-semibold leading-6">nosotros</a>
+          <a href="#" class="text-sm font-semibold leading-6">galería</a>
+          <a href="#" class="text-sm font-semibold leading-6">q&a</a>
         </div>
       </nav>
 
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div id="mobileMenu" class="hidden lg:hidden fixed inset-0 z-10">
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden fixed inset-0 z-10 uppercase text-ivory"
+      >
         <div class="fixed inset-0 z-10 bg-gray-900 opacity-50"></div>
         <div
           class="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-green px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
@@ -120,7 +99,7 @@
             <button
               id="closeMenuBtn"
               type="button"
-              class="-m-2.5 rounded-md p-2.5 text-gray-100"
+              class="-m-2.5 rounded-md p-2.5"
             >
               <span class="sr-only">Close menu</span>
               <svg
@@ -144,32 +123,32 @@
               <div class="space-y-2 py-6">
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >inicio</a
                 >
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >Detalles</a
                 >
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >rsvp</a
                 >
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >nosotros</a
                 >
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >galería</a
                 >
                 <a
                   href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-100 hover:bg-gray-50 uppercase"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >q&a</a
                 >
               </div>
@@ -233,7 +212,7 @@
     </div>
 
     <div
-      class="grid min-h-full place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
+      class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
     >
       <div>
         <img src="/images/detalles.jpeg" alt="" />
@@ -261,7 +240,115 @@
               Hombre
             </button>
           </div>
-          <p class="text-base text-lightGreen">toca los botones para ver la inspiracion de atuendos</p>
+          <p class="text-base text-lightGreen">
+            toca los botones para ver la inspiracion de atuendos
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative grid min-h-[50vh]">
+      <!-- Contenedor de dos imágenes en dos columnas -->
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <!-- Primera imagen de fondo -->
+        <div
+          style="background-image: url(images/jardin_1.jpg)"
+          class="bg-no-repeat bg-center bg-cover"
+        ></div>
+        <!-- Segunda imagen de fondo -->
+        <div
+          style="background-image: url(images/jardin_2.jpg)"
+          class="bg-no-repeat bg-center bg-cover hidden md:block"
+        ></div>
+        <!-- Overlay negro que cubre ambas imágenes -->
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
+      </div>
+
+      <!-- Contenido que se muestra encima de las imágenes y el overlay -->
+      <div
+        class="absolute inset-0 z-10 flex flex-col justify-center items-center uppercase text-center text-ivory"
+      >
+        <img class="h-10 w-10" src="images/favicon.png" alt="Favicon" />
+        <h1 class="text-6xl">venue</h1>
+        <h3 class="text-2xl mt-6">jardín else kientzler</h3>
+        <h3 class="text-2xl">sarchí, alajuela</h3>
+        <button class="p-4 uppercase text-xl bg-lightGreen text-ivory mt-6">
+          ver ubicación
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-lightGreen px-6 py-8 sm:py-16 lg:px-8"
+    >
+      <!-- Contenedor de las imágenes -->
+      <div class="relative flex justify-center items-end mb-16 md:mb-10">
+        <!-- Primera imagen (principal) -->
+        <img
+          class="rounded-t-full max-h-[48rem] object-cover"
+          src="/images/foto3.jpg"
+          alt="Foto principal"
+        />
+        <!-- Segunda imagen (RSVP) posicionada en la parte inferior sobre la primera -->
+        <img
+          class="absolute bottom-[-25%] xl:bottom-[-12.5%] left-1/2 transform -translate-x-1/2 h-48 md:h-56 lg:h-96 w-auto"
+          src="/images/RVSP.png"
+          alt="RSVP"
+        />
+      </div>
+
+      <!-- Formulario para confirmar asistencia -->
+      <div class="text-center text-ivory pt-8 uppercase text-xl">
+        <div>
+          <h3 class="text-4xl pb-4 font-semibold">¿podrás acompañarnos?</h3>
+          <!-- Grupo de botones de radio para confirmar asistencia -->
+          <div class="mb-4">
+            <div class="flex justify-center gap-6">
+              <label>
+                <input type="radio" name="attendance" value="yes" required />
+                Sí
+              </label>
+              <label>
+                <input type="radio" name="attendance" value="no" /> No
+              </label>
+            </div>
+          </div>
+
+          <!-- Formulario -->
+          <form class="flex flex-col justify-center items-center" action="">
+            <!-- Campo de nombre -->
+            <label for="name" class="mb-2">Escribe tu nombre completo</label>
+            <input
+              id="name"
+              type="text"
+              class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs"
+              required
+            />
+
+            <!-- Campo de correo -->
+            <label for="email" class="mb-2">Escribe tu correo</label>
+            <input
+              id="email"
+              type="email"
+              class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs"
+              required
+            />
+
+            <p class="text-base">Por favor confirma antes del</p>
+            <p class="text-base font-bold">12 oct 24</p>
+
+            <!-- Botón de envío -->
+            <button
+              type="submit"
+              class="bg-green text-ivory p-4 my-6 uppercase"
+            >
+              confirmar
+            </button>
+          </form>
+
+          <p class="text-base">
+            *RECUERDA QUE ESTA INVITACIÓN ES EXCLUSIVAMENTE PARA Ti
+          </p>
         </div>
       </div>
     </div>
