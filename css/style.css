@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   @font-face {
     font-family: "LouisGeorgeCafe";
     src: url("/fonts/LouisGeorgeCafe.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
@@ -33,4 +32,9 @@
   }
 }
 
-
+html {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}

@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              green: "#4b4e36",
-              lightGreen: "#848565",
-              ivory: "#f2ede0",
-            },
-            fontFamily: {
-              sans: ["LouisGeorgeCafe", "sans-serif"],
-              serif: ["Koolegant", "serif"],
-              custom: ["BethanyElingston", "serif"],
-            },
-          },
-        },
-      };
-    </script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -33,7 +15,9 @@
   </head>
 
   <body>
-    <header class="bg-green fixed top-0 left-0 right-0 z-50">
+    <header
+      class="bg-green fixed top-0 left-0 right-0 z-50 fadeIn-on-scroll opacity-0"
+    >
       <nav
         class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:py-1 text-ivory uppercase"
         aria-label="Global"
@@ -84,7 +68,7 @@
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div
         id="mobileMenu"
-        class="hidden md:hidden fixed inset-0 z-10 uppercase text-ivory transition-transform duration-300 transform translate-x-full text-xl"
+        class="hidden md:hidden fixed inset-0 z-10 uppercase text-ivory transition-transform duration-300 transform translate-x-full text-xl animate-slideIn"
       >
         <div class="fixed inset-0 z-10 bg-gray-900 opacity-50"></div>
         <div
@@ -170,7 +154,9 @@
       class="relative grid grid-row min-h-svh bg-no-repeat bg-center bg-cover bg-fixed px-6 py-24 sm:py-32 lg:px-8"
     >
       <div class="min-h-svh absolute inset-0 bg-black/[.33] z-0"></div>
-      <div class="flex justify-center items-end z-10 h-2/3 lg:h-5/6">
+      <div
+        class="flex justify-center items-end z-10 h-2/3 lg:h-5/6 fadeIn-on-scroll"
+      >
         <img
           class="h-auto w-auto max-h-72"
           src="/images/logo_jprq.png"
@@ -180,7 +166,7 @@
 
       <!-- Contenedor de las hojas -->
       <div
-        class="absolute bottom-10 w-full flex justify-center items-end z-10 h-1/3 lg:h-1/6"
+        class="absolute bottom-10 w-full flex justify-center items-end z-10 h-1/3 lg:h-1/6 fadeIn-on-scroll"
       >
         <div class="relative flex justify-center items-end">
           <img
@@ -201,10 +187,12 @@
       class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
       <div class="text-center text-green">
-        <h1 class="font-serif font-serif text-6xl uppercase pb-4">
+        <h1
+          class="font-serif font-serif text-6xl uppercase pb-4 fadeIn-on-scroll opacity-0"
+        >
           ¡Nos vamos a casar!
         </h1>
-        <p class="text-2xl">
+        <p class="text-2xl fadeIn-on-scroll opacity-0">
           Y si estás leyendo esto, es porque eres muy importante para
           nosotros...
         </p>
@@ -213,7 +201,7 @@
 
     <div class="grid min-h-full bg-lightGreen px-6 py-4 sm:py-8 lg:px-8">
       <div
-        class="flex flex-row justify-evenly text-ivory uppercase text-center text-xl"
+        class="flex flex-row justify-evenly text-ivory uppercase text-center text-xl fadeIn-on-scroll opacity-0"
       >
         <div>
           <div class="simply-countdown-day text-6xl font-custom"></div>
@@ -238,7 +226,7 @@
       id="detalles"
       class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
-      <div class="flex justify-center w-full">
+      <div class="flex justify-center w-full fadeIn-on-scroll opacity-0">
         <img
           class="w-full max-w-[32rem] h-auto object-cover"
           src="/images/detalles.jpg"
@@ -249,7 +237,7 @@
       <div
         class="flex flex-col justify-center items-center text-center text-green pt-8 uppercase text-xl mx-2"
       >
-        <div>
+        <div class="fadeIn-on-scroll opacity-0">
           <h1 class="font-serif text-6xl pb-4">el gran día</h1>
           <h3
             class="text-lightGreen text-2xl pb-4 tracking-[0.5rem] font-custom"
@@ -273,7 +261,7 @@
           </button>
         </div>
 
-        <div class="mt-6">
+        <div class="mt-6 fadeIn-on-scroll opacity-0">
           <h3 class="text-4xl font-serif">código de vestimenta</h3>
           <p class="text-lightGreen text-2xl">cóctel</p>
           <div class="flex justify-around">
@@ -298,7 +286,7 @@
         <!-- Modal Structure -->
         <div
           id="modal"
-          class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 fadeIn-on-scroll opacity-0"
         >
           <div class="relative bg-white p-4 rounded-lg max-w-lg w-full">
             <!-- Modal Image -->
@@ -339,7 +327,7 @@
 
       <!-- Contenido que se muestra encima de las imágenes y el overlay -->
       <div
-        class="absolute inset-0 z-10 flex flex-col justify-center items-center uppercase text-center text-ivory"
+        class="absolute inset-0 z-10 flex flex-col justify-center items-center uppercase text-center text-ivory fadeIn-on-scroll opacity-0"
       >
         <img
           class="h-24 w-auto -rotate-45"
@@ -365,7 +353,9 @@
       class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-lightGreen px-6 py-8 sm:py-16 lg:px-8"
     >
       <!-- Contenedor de las imágenes -->
-      <div class="relative flex justify-center items-end mb-16 md:mb-10">
+      <div
+        class="relative flex justify-center items-end mb-16 md:mb-10 fadeIn-on-scroll opacity-0"
+      >
         <!-- Primera imagen (principal) -->
         <img
           class="rounded-t-full max-h-[48rem] object-cover"
@@ -381,30 +371,32 @@
       </div>
 
       <!-- Formulario para confirmar asistencia -->
-      <div class="text-center text-ivory pt-8 uppercase text-2xl mx-2">
+      <div
+        class="text-center text-ivory pt-8 uppercase text-2xl mx-2 fadeIn-on-scroll opacity-0"
+      >
         <div>
           <h3 class="text-4xl sm:text-5xl pb-4 font-serif">
             ¿podrás acompañarnos?
           </h3>
-          <!-- Grupo de botones de radio para confirmar asistencia -->
-          <div class="mb-4">
-            <div class="flex justify-evenly gap-6">
-              <label>
-                <input type="radio" name="attendance" value="Si" required />
-                Sí
-              </label>
-              <label>
-                <input type="radio" name="attendance" value="No" /> No
-              </label>
-            </div>
-          </div>
-
           <!-- Formulario -->
           <form
             id="rsvpForm"
             class="flex flex-col justify-center items-center"
             method="post"
           >
+            <!-- Grupo de botones de radio para confirmar asistencia -->
+            <div class="mb-4">
+              <div class="flex justify-evenly gap-6">
+                <label>
+                  <input type="radio" name="attendance" value="Si" required />
+                  Sí
+                </label>
+                <label>
+                  <input type="radio" name="attendance" value="No" /> No
+                </label>
+              </div>
+            </div>
+
             <!-- Campo de nombre -->
             <label for="name" class="mb-2">Escribe tu nombre completo</label>
             <input
@@ -440,7 +432,7 @@
         <div
           class="flex justify-between items-center lg:items-start mb-8 md:mb-2"
         >
-          <div class="flex flex-col">
+          <div class="flex flex-col fadeIn-on-scroll opacity-0">
             <h1 class="font-serif w-full text-6xl uppercase text-[#e0ecc0]">
               muestras
             </h1>
@@ -448,7 +440,9 @@
               de afecto
             </h1>
           </div>
-          <div class="hidden xs:block relative md:hidden">
+          <div
+            class="hidden xs:block relative md:hidden fadeIn-on-scroll opacity-0"
+          >
             <img
               class="w-full relative h-20 w-auto -rotate-12 -top-6 z-10"
               src="/images/Hoja_ivory.png"
@@ -461,7 +455,7 @@
             />
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center fadeIn-on-scroll opacity-0">
           <p class="text-2xl md:text-start">
             Hemos sido enormemente bendecidos y ya tenemos casi todo para
             nuestro nuevo comienzo, por esta razón, si deseas bendecirnos
@@ -484,7 +478,7 @@
       class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
       <img
-        class="w-full max-w-2xl h-auto"
+        class="w-full max-w-2xl h-auto fadeIn-on-scroll opacity-0"
         src="/images/nuestra_historia.png"
         alt="Nuestra historia"
       />
@@ -494,7 +488,9 @@
       class="grid grid-cols-1 lg:grid-cols-3 min-h-full place-items-center bg-green px-6 py-8 sm:py-16 lg:px-8 gap-x-12 text-xl"
     >
       <div class="text-center text-ivory">
-        <div class="flex flex-col justify-evenly items-center p-4">
+        <div
+          class="flex flex-col justify-evenly items-center p-4 fadeIn-on-scroll opacity-0"
+        >
           <img
             class="h-24 w-auto -rotate-45"
             src="/images/Hoja_ivory.png"
@@ -503,18 +499,22 @@
           <h1 class="font-serif text-4xl uppercase text-ivory">EL INICIO</h1>
           <h3 class="font-serif text-4xl uppercase text-ivory">8.11.18</h3>
         </div>
-        <p>
-          Veintiún velas debió haber apagado, pero su corazón a él la había
-          acercado.
-        </p>
-        <p>Dios le presentó al hombre que había esculpido solo para ella.</p>
-        <p>
-          Con certeza, ambos coinciden en que fue AMOR A PRIMERA VISTA y desde
-          entonces, han sido JuanPa & Raque
-        </p>
+        <div class="fadeIn-on-scroll opacity-0">
+          <p>
+            Veintiún velas debió haber apagado, pero su corazón a él la había
+            acercado.
+          </p>
+          <p>Dios le presentó al hombre que había esculpido solo para ella.</p>
+          <p>
+            Con certeza, ambos coinciden en que fue AMOR A PRIMERA VISTA y desde
+            entonces, han sido JuanPa & Raque
+          </p>
+        </div>
       </div>
       <div class="text-center text-ivory">
-        <div class="flex flex-col justify-evenly items-center p-4">
+        <div
+          class="flex flex-col justify-evenly items-center p-4 fadeIn-on-scroll opacity-0"
+        >
           <img
             class="h-24 w-auto -rotate-45"
             src="/images/Hoja_ivory.png"
@@ -523,15 +523,19 @@
           <h1 class="font-serif text-4xl uppercase text-ivory">PRIMERA CITA</h1>
           <h3 class="font-serif text-4xl uppercase text-ivory">10.11.18</h3>
         </div>
-        <p>
-          Ahí estaba él, con su mejor atuendo y sonrisa, y ella, hecha un manojo
-          de nervios, pensando en cómo había logrado captar la atención de tan
-          maravilloso muchacho. Aquella noche, bajo un cielo lleno de estrellas
-          cómplices, se juraron empezar una aventura juntos.
-        </p>
+        <div class="fadeIn-on-scroll opacity-0">
+          <p>
+            Ahí estaba él, con su mejor atuendo y sonrisa, y ella, hecha un
+            manojo de nervios, pensando en cómo había logrado captar la atención
+            de tan maravilloso muchacho. Aquella noche, bajo un cielo lleno de
+            estrellas cómplices, se juraron empezar una aventura juntos.
+          </p>
+        </div>
       </div>
       <div class="text-center text-ivory">
-        <div class="flex flex-col justify-evenly items-center p-4">
+        <div
+          class="flex flex-col justify-evenly items-center p-4 fadeIn-on-scroll opacity-0"
+        >
           <img
             class="h-24 w-auto -rotate-45"
             src="/images/Hoja_ivory.png"
@@ -540,17 +544,21 @@
           <h1 class="font-serif text-4xl uppercase text-ivory">LA PREGUNTA</h1>
           <h3 class="font-serif text-4xl uppercase text-ivory">1.8.24</h3>
         </div>
-        <p>
-          Rodeados del frío aire de Poás y en medio de su calor, Juan Pa le
-          entregó a Raque el álbum de fotos que con tanta dedicación había
-          creado para ella, y en una de sus páginas estaba la gran pregunta,
-          “¿quieres casarte conmigo?” Si le preguntamos a él, ella no contestó;
-          pero ella, sin duda, en medio de lágrimas y emoción, con su cabeza
-          asintió.
-        </p>
+        <div class="fadeIn-on-scroll opacity-0">
+          <p>
+            Rodeados del frío aire de Poás y en medio de su calor, Juan Pa le
+            entregó a Raque el álbum de fotos que con tanta dedicación había
+            creado para ella, y en una de sus páginas estaba la gran pregunta,
+            “¿quieres casarte conmigo?” Si le preguntamos a él, ella no
+            contestó; pero ella, sin duda, en medio de lágrimas y emoción, con
+            su cabeza asintió.
+          </p>
+        </div>
       </div>
       <div class="text-center text-ivory">
-        <div class="flex flex-col justify-evenly items-center p-4">
+        <div
+          class="flex flex-col justify-evenly items-center p-4 fadeIn-on-scroll opacity-0"
+        >
           <img
             class="h-24 w-auto -rotate-45"
             src="/images/Hoja_ivory.png"
@@ -561,14 +569,16 @@
           </h1>
           <h3 class="font-serif text-4xl uppercase text-ivory">12.12.24</h3>
         </div>
-        <p>
-          El día que con ansias esperamos celebrar, junto a ti, a quien en
-          nuestro corazón le guardamos un lugar, por favor concédenos el honor
-          de escribir este momento contigo de testigo.
-        </p>
+        <div class="fadeIn-on-scroll opacity-0">
+          <p>
+            El día que con ansias esperamos celebrar, junto a ti, a quien en
+            nuestro corazón le guardamos un lugar, por favor concédenos el honor
+            de escribir este momento contigo de testigo.
+          </p>
+        </div>
       </div>
       <div
-        class="flex flex-col justify-center items-center min-h-full lg:col-span-2 pt-12 uppercase"
+        class="flex flex-col justify-center items-center min-h-full lg:col-span-2 pt-12 uppercase fadeIn-on-scroll opacity-0"
       >
         <img
           class="w-full max-w-2xl h-auto"
@@ -584,7 +594,7 @@
       id="galeria"
       class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
-      <div class="text-center text-green uppercase">
+      <div class="text-center text-green uppercase fadeIn-on-scroll opacity-0">
         <h1 class="font-serif text-7xl">galería</h1>
       </div>
     </div>
@@ -592,7 +602,7 @@
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-full place-items-center bg-lightGreen p-6 sm:py-12 lg:px-8 gap-2"
     >
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -601,7 +611,7 @@
           />
         </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -610,7 +620,7 @@
           />
         </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -619,7 +629,7 @@
           />
         </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -628,7 +638,7 @@
           />
         </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -637,7 +647,7 @@
           />
         </div>
       </div>
-      <div class="w-full flex justify-center">
+      <div class="w-full flex justify-center fadeIn-on-scroll opacity-0">
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
@@ -648,14 +658,9 @@
       </div>
 
       <div
-        class="w-full flex justify-center items-center md:col-span-2 lg:col-span-3 mt-10"
+        class="w-full flex justify-center items-center md:col-span-2 lg:col-span-3 mt-10 fadeIn-on-scroll opacity-0"
       >
-        <video
-          class="w-full min-h-svh"
-          controls
-          preload="auto"
-          title="Video"
-        >
+        <video class="w-full min-h-svh" controls preload="auto" title="Video">
           <source src="/videos/VIDEO INVITACION.mp4" type="video/mp4" />
           Tu navegador no soporta la etiqueta de video.
         </video>
@@ -664,18 +669,22 @@
       <div
         class="text-center text-ivory text-2xl md:col-span-2 lg:col-span-3 mt-8"
       >
-        <p>
-          Yo encontré un amor como el que describe
-          <span class="font-bold">1 Corintios 13: 4-7:</span>
-        </p>
-        <p>
-          Un amor paciente, benigno, que no es presumido ni orgulloso, que no se
-          comporta con rudeza ni es egoísta, no se enoja fácilmente y tampoco
-          guarda rencor. Un amor al que no le gustan las injusticias, uno que
-          disculpa todos los errores y todo lo soporta, que siempre confía y
-          espera siempre lo mejor de mí
-        </p>
-        <div class="flex justify-center items-center mt-6">
+        <div class="fadeIn-on-scroll opacity-0">
+          <p>
+            Yo encontré un amor como el que describe
+            <span class="font-bold">1 Corintios 13: 4-7:</span>
+          </p>
+          <p>
+            Un amor paciente, benigno, que no es presumido ni orgulloso, que no
+            se comporta con rudeza ni es egoísta, no se enoja fácilmente y
+            tampoco guarda rencor. Un amor al que no le gustan las injusticias,
+            uno que disculpa todos los errores y todo lo soporta, que siempre
+            confía y espera siempre lo mejor de mí
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center mt-6 fadeIn-on-scroll opacity-0"
+        >
           <img
             class="h-auto w-auto max-h-40"
             src="/images/logo_jprq.png"
@@ -690,7 +699,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-full place-items-center bg-ivory p-6 sm:py-12 lg:px-8 gap-12 text-center"
     >
       <div
-        class="flex flex-col md:flex-row items-center md:items-start text-2xl md:col-span-2 lg:col-span-3 mt-8 text-lightGreen uppercase"
+        class="flex flex-col md:flex-row items-center md:items-start text-2xl md:col-span-2 lg:col-span-3 mt-8 text-lightGreen uppercase fadeIn-on-scroll opacity-0"
       >
         <!-- Espacio horizontal entre los elementos -->
         <div class="mb-4 md:mr-12 md:mb-0">
@@ -703,7 +712,28 @@
         </div>
       </div>
 
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          Qué pasa si no llego a tiempo?
+        </h1>
+        <p class="text-green text-lg">
+          El transporte está programado para recogerte en el parqueo entre
+          9:30-9:45 am, pues la ceremonia iniciará a las 10:00am, por favor sé
+          puntual para que no te pierdas el transporte ni parte de la ceremonia.
+        </p>
+      </div>
+      <div class="w-full fadeIn-on-scroll opacity-0">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          Cuándo es la fecha límite para confirmar asistencia?
+        </h1>
+        <p class="text-green text-lg">
+          Por favor, reserva antes del 12 de octubre 2024 en la sección de RSVP
+          en este website. Desafortunadamente, si no confirmas a tiempo, nos
+          dará a entender que no vas a asistir y ya no tendremos la oportunidad
+          de incluirte.
+        </p>
+      </div>
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           HAY ESTACIONAMIENTO DENTRO DEL LUGAR?
         </h1>
@@ -711,7 +741,7 @@
           Sí, cuenta con un amplio parqueo dentro de sus instalaciones
         </p>
       </div>
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           es al aire libre o bajo techo?
         </h1>
@@ -720,7 +750,7 @@
           de la exuberante vegetación del lugar
         </p>
       </div>
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           puedo llevar a un invitado extra?
         </h1>
@@ -729,7 +759,7 @@
           personas que han sido parte importante en nuestra relación
         </p>
       </div>
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           la ceremonia y la recepción será en el mismo lugar?
         </h1>
@@ -737,7 +767,7 @@
           Sí, todo será dentro del mismo jardín de 7 hectáreas
         </p>
       </div>
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           hay que caminar mucho?
         </h1>
@@ -746,7 +776,7 @@
           zona donde se hará la ceremonia y viceversa.
         </p>
       </div>
-      <div class="w-full">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           Puedo ceder mi espacio?
         </h1>
@@ -755,7 +785,7 @@
           favor háznoslo saber con tiempo
         </p>
       </div>
-      <div class="w-full md:col-span-2 lg:col-span-3 max-w-4xl">
+      <div class="w-full fadeIn-on-scroll opacity-0">
         <h1 class="uppercase font-semibold text-xl text-green">
           Puedo tomar fotos con mi teléfono?
         </h1>
@@ -767,7 +797,9 @@
           nos las envíes.
         </p>
       </div>
-      <div class="flex flex-col w-full md:col-span-2 lg:col-span-3">
+      <div
+        class="flex flex-col w-full md:col-span-2 lg:col-span-3 fadeIn-on-scroll opacity-0"
+      >
         <h1 class="font-serif uppercase text-5xl text-lightGreen">
           Déjanos un mensaje
         </h1>
@@ -793,7 +825,9 @@
     </div>
 
     <footer>
-      <div class="bg-lightGreen text-ivory text-xl text-center p-6">
+      <div
+        class="bg-lightGreen text-ivory text-xl text-center p-6 fadeIn-on-scroll opacity-0"
+      >
         <p>
           <small class="block">Fotografía Sara Romero</small>
           <small class="block">Diseño Web Samuel Romero</small>
@@ -806,133 +840,9 @@
         </p>
       </div>
     </footer>
-
+    <!-- Countdown -->
     <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
-
-    <script>
-      var d = new Date("12/12/2024 3:30:00");
-      simplyCountdown(".simply-countdown-one", {
-        year: d.getFullYear(),
-        month: d.getMonth(),
-        day: d.getDate(),
-        hours: d.getHours(),
-        minutes: d.getMinutes(),
-        seconds: d.getSeconds(),
-      });
-    </script>
-
-    <script>
-      // Inicializar EmailJS
-      emailjs.init({
-        publicKey: "CaMtCOGGOlFWE2dXC",
-      });
-
-      // Obtener el formulario y agregar el evento submit
-      document
-        .getElementById("rsvpForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Evitar que se recargue la página
-
-          // Obtener los valores del formulario
-          const name = document.getElementById("name").value;
-          const attendance = document.querySelector(
-            'input[name="attendance"]:checked'
-          ).value;
-
-          // Configurar los parámetros del email
-          const templateParams = {
-            from_name: name,
-            attendance: attendance,
-            message: `Confirmación de asistencia de ${attendance}`,
-          };
-
-          // Enviar el correo usando EmailJS
-          emailjs
-            .send("service_f7sxcyp", "template_5f05e55", templateParams)
-            .then(function (response) {
-              console.log("SUCCESS!", response.status, response.text);
-
-              // Mostrar mensaje de éxito
-              alert("¡Gracias por confirmar tu asistencia!");
-            })
-            .catch(function (error) {
-              console.error("FAILED...", error);
-            });
-        });
-    </script>
-
-    <script>
-      // Inicializa EmailJS con tu User ID
-      emailjs.init({
-        publicKey: "CaMtCOGGOlFWE2dXC",
-      });
-
-      // Maneja el envío del formulario
-      document
-        .getElementById("mensaje")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Evita el comportamiento por defecto del formulario
-
-          const message = document.getElementById("message").value;
-
-          // Configurar los parámetros del email
-          const templateParams = {
-            message: message,
-          };
-
-          // Envia el formulario usando EmailJS
-          emailjs
-            .send("service_f7sxcyp", "template_yptbq66", templateParams)
-            .then(
-              function (response) {
-                console.log("Success:", response);
-                alert("Mensaje enviado con éxito");
-                document.getElementById("mensaje").reset(); // Opcional: limpia el formulario después del envío
-              },
-              function (error) {
-                console.error("Error:", error);
-                alert(
-                  "Hubo un error al enviar el mensaje. Inténtalo de nuevo."
-                );
-              }
-            );
-        });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const btnMujer = document.getElementById("btnMujer");
-        const btnHombre = document.getElementById("btnHombre");
-        const modal = document.getElementById("modal");
-        const modalImage = document.getElementById("modalImage");
-        const closeModal = document.getElementById("closeModal");
-
-        // Event listener to open modal with Mujer image
-        btnMujer.addEventListener("click", () => {
-          modalImage.src = "/images/MUJERES.png"; // Change to the path of the Mujer image
-          modal.classList.remove("hidden");
-        });
-
-        // Event listener to open modal with Hombre image
-        btnHombre.addEventListener("click", () => {
-          modalImage.src = "/images/HOMBRES.png"; // Change to the path of the Hombre image
-          modal.classList.remove("hidden");
-        });
-
-        // Event listener to close the modal
-        closeModal.addEventListener("click", () => {
-          modal.classList.add("hidden");
-        });
-
-        // Close modal when clicking outside the modal content
-        modal.addEventListener("click", (event) => {
-          if (event.target === modal) {
-            modal.classList.add("hidden");
-          }
-        });
-      });
-    </script>
   </body>
 </html>
