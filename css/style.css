@@ -10,11 +10,10 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Koolegant";
-    src: url("/fonts/koolegant/Koolegant.ttf")
-      format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    src: url("/fonts/koolegant/Koolegant.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
     font-weight: normal;
     font-style: normal;
   }

@@ -27,19 +27,23 @@
         },
       };
     </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
     <header class="bg-green fixed top-0 left-0 right-0 z-50">
       <nav
-        class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-6 text-ivory uppercase"
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:py-1 text-ivory uppercase"
         aria-label="Global"
       >
         <div class="flex md:flex-1">
-          <a href="#">
+          <a href="#inicio">
             <span class="sr-only">La boda de JuanPa & Raque</span>
             <img
-              class="h-10 w-auto"
+              class="h-10 lg:h-16 w-auto"
               src="/images/favicon.png"
               alt="La boda de JuanPa & Raque"
             />
@@ -69,26 +73,30 @@
           </button>
         </div>
         <div class="hidden md:flex md:gap-x-12">
-          <a href="#" class="text-sm font-semibold leading-6">inicio</a>
-          <a href="#" class="text-sm font-semibold leading-6">Detalles</a>
-          <a href="#" class="text-sm font-semibold leading-6">rsvp</a>
-          <a href="#" class="text-sm font-semibold leading-6">nosotros</a>
-          <a href="#" class="text-sm font-semibold leading-6">galería</a>
-          <a href="#" class="text-sm font-semibold leading-6">q&a</a>
+          <a href="#inicio" class="text-sm font-semibold leading-6">inicio</a>
+          <a href="#detalles" class="text-sm font-semibold leading-6"
+            >Detalles</a
+          >
+          <a href="#rsvp" class="text-sm font-semibold leading-6">rsvp</a>
+          <a href="#nosotros" class="text-sm font-semibold leading-6"
+            >nosotros</a
+          >
+          <a href="#galeria" class="text-sm font-semibold leading-6">galería</a>
+          <a href="#q&a" class="text-sm font-semibold leading-6">q&a</a>
         </div>
       </nav>
 
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div
         id="mobileMenu"
-        class="hidden md:hidden fixed inset-0 z-10 uppercase text-ivory"
+        class="hidden md:hidden fixed inset-0 z-10 uppercase text-ivory transition-transform duration-300 transform translate-x-full"
       >
         <div class="fixed inset-0 z-10 bg-gray-900 opacity-50"></div>
         <div
           class="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-green px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
         >
           <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="#inicio" class="-m-1.5 p-1.5">
               <span class="sr-only">La boda de JuanPa & Raque</span>
               <img
                 class="h-10 w-auto"
@@ -122,32 +130,32 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="#inicio"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >inicio</a
                 >
                 <a
-                  href="#"
+                  href="#detalles"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >Detalles</a
                 >
                 <a
-                  href="#"
+                  href="#rsvp"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >rsvp</a
                 >
                 <a
-                  href="#"
+                  href="#nosotros"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >nosotros</a
                 >
                 <a
-                  href="#"
+                  href="#galeria"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >galería</a
                 >
                 <a
-                  href="#"
+                  href="#q&a"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-ivory hover:text-green"
                   >q&a</a
                 >
@@ -159,20 +167,35 @@
     </header>
 
     <div
+      id="inicio"
       style="background-image: url(images/inicio.jpg)"
-      class="relative grid min-h-screen bg-no-repeat bg-center bg-cover bg-fixed px-6 py-24 sm:py-32 lg:px-8"
+      class="relative grid grid-row min-h-screen bg-no-repeat bg-center bg-cover bg-fixed px-6 py-24 sm:py-32 lg:px-8"
     >
-      <div class="min-h-screen absolute inset-0 bg-black/50 z-0"></div>
-      <div class="flex justify-center items-end z-10">
+      <div class="min-h-screen absolute inset-0 bg-black/[.33] z-0"></div>
+      <div class="flex justify-center items-end z-10 h-2/3 lg:h-5/6">
         <img
-          class="h-auto w-auto max-h-56"
+          class="h-auto w-auto max-h-72"
           src="/images/logo_jprq.png"
-          alt=""
+          alt="logo"
         />
       </div>
 
-      <div class="flex justify-center items-end z-10">
-        <img class="h-10" src="/images/favicon.png" alt="" />
+      <!-- Contenedor de las hojas -->
+      <div
+        class="absolute bottom-10 w-full flex justify-center items-end z-10 h-1/3 lg:h-1/6"
+      >
+        <div class="relative flex justify-center items-end">
+          <img
+            class="h-16 relative -left-6 z-10"
+            src="/images/Hoja_ivory.png"
+            alt="Hoja 1"
+          />
+          <img
+            class="h-16 rotate-90 absolute left-6 z-0"
+            src="/images/Hoja_ivory.png"
+            alt="Hoja 2"
+          />
+        </div>
       </div>
     </div>
 
@@ -180,7 +203,7 @@
       class="grid min-h-full place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
     >
       <div class="text-center text-green">
-        <h1 class="text-3xl uppercase font-bold pb-4">¡Nos vamos a casar!</h1>
+        <h1 class="text-4xl uppercase font-bold pb-4">¡Nos vamos a casar!</h1>
         <p class="text-lg">
           Y si estás leyendo esto, es porque eres muy importante para
           nosotros...
@@ -212,15 +235,23 @@
     </div>
 
     <div
-      class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-ivory px-6 py-16 sm:py-32 lg:px-8"
+      id="detalles"
+      class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
-      <div>
-        <img src="/images/detalles.jpeg" alt="" />
+      <div class="flex justify-center w-full">
+        <img
+          class="w-full max-w-[32rem] h-auto object-cover"
+          src="/images/detalles.jpg"
+          alt="Imagen responsiva"
+        />
       </div>
+
       <div class="text-center text-green pt-8 uppercase text-xl">
         <div>
           <h1 class="text-4xl font-bold pb-4">el gran día</h1>
-          <h3 class="text-lightGreen text-2xl pb-4">detalles</h3>
+          <h3 class="text-lightGreen text-2xl pb-4 tracking-[0.25rem]">
+            detalles
+          </h3>
           <p class="">jardín else kientzler</p>
           <p class="">12 diciembre 2024</p>
           <p class="">9:30 am</p>
@@ -268,17 +299,22 @@
       <div
         class="absolute inset-0 z-10 flex flex-col justify-center items-center uppercase text-center text-ivory"
       >
-        <img class="h-10 w-10" src="images/favicon.png" alt="Favicon" />
-        <h1 class="text-6xl">venue</h1>
+        <img
+          class="h-24 w-auto -rotate-45"
+          src="images/Hoja_ivory.png"
+          alt="Favicon"
+        />
+        <h1 class="text-6xl tracking-[0.5rem]">venue</h1>
         <h3 class="text-2xl mt-6">jardín else kientzler</h3>
         <h3 class="text-2xl">sarchí, alajuela</h3>
-        <button class="p-4 uppercase text-xl bg-lightGreen text-ivory mt-6">
+        <button class="p-4 uppercase text-xl bg-lightGreen text-ivory mt-10">
           ver ubicación
         </button>
       </div>
     </div>
 
     <div
+      id="rsvp"
       class="grid grid-cols-1 md:grid-cols-2 place-items-center bg-lightGreen px-6 py-8 sm:py-16 lg:px-8"
     >
       <!-- Contenedor de las imágenes -->
@@ -286,7 +322,7 @@
         <!-- Primera imagen (principal) -->
         <img
           class="rounded-t-full max-h-[48rem] object-cover"
-          src="/images/foto3.jpg"
+          src="/images/foto1.jpg"
           alt="Foto principal"
         />
         <!-- Segunda imagen (RSVP) posicionada en la parte inferior sobre la primera -->
@@ -303,33 +339,28 @@
           <h3 class="text-4xl pb-4 font-semibold">¿podrás acompañarnos?</h3>
           <!-- Grupo de botones de radio para confirmar asistencia -->
           <div class="mb-4">
-            <div class="flex justify-center gap-6">
+            <div class="flex justify-evenly gap-6">
               <label>
-                <input type="radio" name="attendance" value="yes" required />
+                <input type="radio" name="attendance" value="Si" required />
                 Sí
               </label>
               <label>
-                <input type="radio" name="attendance" value="no" /> No
+                <input type="radio" name="attendance" value="No" /> No
               </label>
             </div>
           </div>
 
           <!-- Formulario -->
-          <form class="flex flex-col justify-center items-center" action="">
+          <form
+            id="rsvpForm"
+            class="flex flex-col justify-center items-center"
+            method="post"
+          >
             <!-- Campo de nombre -->
             <label for="name" class="mb-2">Escribe tu nombre completo</label>
             <input
               id="name"
               type="text"
-              class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs"
-              required
-            />
-
-            <!-- Campo de correo -->
-            <label for="email" class="mb-2">Escribe tu correo</label>
-            <input
-              id="email"
-              type="email"
               class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs"
               required
             />
@@ -354,25 +385,339 @@
     </div>
 
     <div
-      class="grid min-h-full place-items-center bg-green px-6 py-16 sm:py-32 lg:px-8"
+      class="grid min-h-full place-items-center bg-green px-6 py-12 sm:py-24 lg:px-8"
     >
-      <div class="text-center text-ivory">
-        <div class="flex justify-evenly items-center pb-4">
-          <h1 class="text-3xl uppercase font-bold text-[#e0ecc0]">
-            muestras de <span class="text-[#dff2a4]">afecto</span>
-          </h1>
-          <img class="h-40 w-auto" src="/images/favicon.png" alt="" />
+      <div class="text-center text-ivory max-w-6xl">
+        <div
+          class="flex justify-between items-center lg:items-start mb-8 md:mb-4"
+        >
+          <div class="flex flex-col">
+            <h1 class="w-full text-5xl uppercase font-bold text-[#e0ecc0]">
+              muestras
+            </h1>
+            <h1 class="w-full text-5xl uppercase font-bold text-[#e0ecc0]">
+              de <span class="text-[#dff2a4]">afecto</span>
+            </h1>
+          </div>
+          <div class="hidden xs:block relative md:hidden">
+            <img
+              class="w-full relative h-20 w-auto -rotate-12 -top-6 z-10"
+              src="/images/Hoja_ivory.png"
+              alt=""
+            />
+            <img
+              class="w-full absolute h-16 w-auto -rotate-90 top-8 left-2 z-0"
+              src="/images/Hoja_ivory.png"
+              alt=""
+            />
+          </div>
         </div>
-        <p class="text-lg">
-          Hemos sido enormemente bendecidos y ya tenemos casi todo para nuestro
-          nuevo comienzo, por esta razón, si deseas bendecirnos preferimos que
-          sea un regalo en efectivo, en el gran día habrán sobres especialmente
-          para tu detalle, podrás dejarnos un mensaje también. O si lo
-          prefieres, puedes entregarnos el regalo por medio de transferencia o
-          SINPE.
-        </p>
+        <div class="flex items-center">
+          <p class="text-xl md:text-start">
+            Hemos sido enormemente bendecidos y ya tenemos casi todo para
+            nuestro nuevo comienzo, por esta razón, si deseas bendecirnos
+            preferimos que sea un regalo en efectivo, en el gran día habrán
+            sobres especialmente para tu detalle, podrás dejarnos un mensaje
+            también. O si lo prefieres, puedes entregarnos el regalo por medio
+            de transferencia o SINPE.
+          </p>
+          <img
+            class="hidden md:block h-48 w-auto"
+            src="images/Hoja_pair.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
+
+    <div
+      id="nosotros"
+      class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
+    >
+      <img
+        class="w-full max-w-2xl h-auto"
+        src="/images/nuestra_historia.png"
+        alt="Nuestra historia"
+      />
+    </div>
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 min-h-full place-items-center bg-green px-6 py-8 sm:py-16 lg:px-8 gap-x-12"
+    >
+      <div class="text-center text-ivory">
+        <div class="flex flex-col justify-evenly items-center p-4">
+          <img
+            class="h-24 w-auto -rotate-45"
+            src="/images/Hoja_ivory.png"
+            alt=""
+          />
+          <h1 class="text-4xl uppercase font-semibold text-ivory">EL INICIO</h1>
+          <h3 class="text-4xl uppercase font-semibold text-ivory">8.11.18</h3>
+        </div>
+        <p class="text-lg">
+          Veintiún velas debió haber apagado, pero su corazón a él la había
+          acercado. Dios le presentó al hombre que había esculpido solo para
+          ella. Con certeza, ambos coinciden en que fue AMOR A PRIMERA VISTA y
+          desde entonces, han sido JuanPa & Raque
+        </p>
+      </div>
+      <div class="text-center text-ivory">
+        <div class="flex flex-col justify-evenly items-center p-4">
+          <img
+            class="h-24 w-auto -rotate-45"
+            src="/images/Hoja_ivory.png"
+            alt=""
+          />
+          <h1 class="text-4xl uppercase font-semibold text-ivory">
+            PRIMERA CITA
+          </h1>
+          <h3 class="text-4xl uppercase font-semibold text-ivory">10.11.18</h3>
+        </div>
+        <p class="text-lg">
+          Ahí estaba él, con su mejor atuendo y sonrisa, y ella, hecha un manojo
+          de nervios, pensando en cómo había logrado captar la atención de tan
+          maravilloso muchacho. Aquella noche, bajo un cielo lleno de estrellas
+          cómplices, se juraron empezar una aventura juntos.
+        </p>
+      </div>
+      <div class="text-center text-ivory">
+        <div class="flex flex-col justify-evenly items-center p-4">
+          <img
+            class="h-24 w-auto -rotate-45"
+            src="/images/Hoja_ivory.png"
+            alt=""
+          />
+          <h1 class="text-4xl uppercase font-semibold text-ivory">
+            LA PREGUNTA
+          </h1>
+          <h3 class="text-4xl uppercase font-semibold text-ivory">1.8.24</h3>
+        </div>
+        <p class="text-lg">
+          Rodeados del frío aire de Poás y en medio de su calor, Juan Pa le
+          entregó a Raque el álbum de fotos que con tanta dedicación había
+          creado para ella, y en una de sus páginas estaba la gran pregunta,
+          “¿quieres casarte conmigo?” Si le preguntamos a él, ella no contestó;
+          pero ella, sin duda, en medio de lágrimas y emoción, con su cabeza
+          asintió.
+        </p>
+      </div>
+      <div class="text-center text-ivory">
+        <div class="flex flex-col justify-evenly items-center p-4">
+          <img
+            class="h-24 w-auto -rotate-45"
+            src="/images/Hoja_ivory.png"
+            alt=""
+          />
+          <h1 class="text-4xl uppercase font-semibold text-ivory">
+            EL MÁS ESPERADO SÍ
+          </h1>
+          <h3 class="text-4xl uppercase font-semibold text-ivory">12.12.24</h3>
+        </div>
+        <p class="text-lg">
+          El día que con ansias esperamos celebrar, junto a ti, a quien en
+          nuestro corazón le guardamos un lugar, por favor concédenos el honor
+          de escribir este momento contigo de testigo/a.
+        </p>
+      </div>
+      <div
+        class="flex justify-center items-center min-h-full lg:col-span-2 pt-12 uppercase"
+      >
+        <!-- Imagen centrada con flexbox -->
+        <div class="relative">
+          <img
+            class="w-full max-w-2xl h-auto"
+            src="/images/foto2.jpg"
+            alt="Imagen"
+          />
+          <!-- Texto sobrepuesto en la parte inferior derecha -->
+          <h1 class="absolute bottom-4 right-4 text-4xl text-ivory font-bold">
+            continuará...
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="galeria"
+      class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
+    >
+      <div class="text-center text-green uppercase">
+        <h1 class="text-6xl font-bold pb-4">galería</h1>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-full place-items-center bg-lightGreen p-6 sm:py-12 lg:px-8 gap-2"
+    >
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div class="w-full flex justify-center">
+        <img class="w-full max-w-lg h-auto" src="images/EXTRA1.jpg" alt="" />
+      </div>
+      <div
+        class="text-center text-ivory text-2xl md:col-span-2 lg:col-span-3 mt-8"
+      >
+        <p>
+          Yo encontré un amor como el que describe
+          <span class="font-bold">1 Corintios 13: 4-7:</span>
+        </p>
+        <p>
+          Un amor paciente, benigno, que no es presumido ni orgulloso, que no se
+          comporta con rudeza ni es egoísta, no se enoja fácilmente y tampoco
+          guarda rencor. Un amor al que no le gustan las injusticias, uno que
+          disculpa todos los errores y todo lo soporta, que siempre confía y
+          espera siempre lo mejor de mí
+        </p>
+        <div class="flex justify-center items-center mt-6">
+          <img
+            class="h-auto w-auto max-h-40"
+            src="/images/logo_jprq.png"
+            alt="logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="q&a"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-full place-items-center bg-ivory p-6 sm:py-12 lg:px-8 gap-12 text-center"
+    >
+      <div
+        class="flex flex-col md:flex-row items-center md:items-start text-2xl md:col-span-2 lg:col-span-3 mt-8 text-lightGreen uppercase"
+      >
+        <!-- Espacio horizontal entre los elementos -->
+        <div class="mb-4 md:mr-12 md:mb-0">
+          <h1 class="text-green text-8xl">Q&A</h1>
+        </div>
+
+        <div class="text-5xl font-semibold">
+          <h1 class="text-5xl">PREGUNTAS</h1>
+          <h1 class="text-5xl">& RESPUESTAS</h1>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          HAY ESTACIONAMIENTO DENTRO DEL LUGAR?
+        </h1>
+        <p class="text-green text-lg">
+          Sí, cuenta con un amplio parqueo dentro de sus instalaciones
+        </p>
+      </div>
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          es al aire libre o bajo techo?
+        </h1>
+        <p class="text-green text-lg">
+          Tanto la ceremonia como la recepción se harán al aire libre, rodeados
+          de la exuberante vegetación del lugar
+        </p>
+      </div>
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          puedo llevar a un invitado extra?
+        </h1>
+        <p class="text-green text-lg">
+          No, queremos que nuestro gran día sea celebrado únicamente con las
+          personas que han sido parte importante en nuestra relación
+        </p>
+      </div>
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          la ceremonia y la recepción será en el mismo lugar?
+        </h1>
+        <p class="text-green text-lg">
+          Sí, todo será dentro del mismo jardín de 7 hectáreas
+        </p>
+      </div>
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          hay que caminar mucho?
+        </h1>
+        <p class="text-green text-lg">
+          No mucho, el jardín brinda servicio de traslado del parqueo hasta la
+          zona donde se hará la ceremonia y viceversa.
+        </p>
+      </div>
+      <div class="w-full">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          Puedo ceder mi espacio?
+        </h1>
+        <p class="text-green text-lg">
+          No, esta invitación se creó pensando en ti, si no puedes asistir por
+          favor háznoslo saber con tiempo
+        </p>
+      </div>
+      <div class="w-full md:col-span-2 lg:col-span-3 max-w-4xl">
+        <h1 class="uppercase font-semibold text-xl text-green">
+          Puedo tomar fotos con mi teléfono?
+        </h1>
+        <p class="text-green text-lg">
+          Tendremos a un equipo de profesionales en foto y video, por lo que te
+          pedimos por favor durante la ceremonia no uses tu teléfono, asi
+          podremos ver tu linda cara en las fotografías. Para el resto del
+          evento nos encantaría que tomes todas las fotos y videos que quieras y
+          nos las envíes.
+        </p>
+      </div>
+      <div class="flex flex-col w-full md:col-span-2 lg:col-span-3">
+        <h1 class="uppercase font-semibold text-5xl text-lightGreen">
+          Déjanos un mensaje
+        </h1>
+        <form
+          id="mensaje"
+          class="flex flex-col justify-center items-center"
+          method="post"
+        >
+          <textarea
+            id="message"
+            class="rounded-2xl px-4 m-4 border border-gray-300 w-full max-w-xl"
+            rows="4"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
+
+          <!-- Botón de envío -->
+          <button type="submit" class="bg-green text-ivory p-4 my-2 uppercase">
+            enviar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div
+        class="bg-lightGreen text-ivory text-xl text-center font-semibold p-6"
+      >
+        <p>
+          <small class="block"
+            >Photography by <a href="" target="_blank">Sara Romero</a></small
+          >
+          <small class="block"
+            >Web Design by
+            <a href="https://github.com/SamusCreations" target="_blank"
+              >SamusCreations</a
+            ></small
+          >
+          <small class="block"
+            >SamusCreations &copy; 2024 All Rights Reserved.</small
+          >
+        </p>
+      </div>
+    </footer>
 
     <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
@@ -388,6 +733,84 @@
         minutes: d.getMinutes(),
         seconds: d.getSeconds(),
       });
+    </script>
+
+    <script>
+      // Inicializar EmailJS
+      emailjs.init({
+        publicKey: "CaMtCOGGOlFWE2dXC",
+      });
+
+      // Obtener el formulario y agregar el evento submit
+      document
+        .getElementById("rsvpForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar que se recargue la página
+
+          // Obtener los valores del formulario
+          const name = document.getElementById("name").value;
+          const attendance = document.querySelector(
+            'input[name="attendance"]:checked'
+          ).value;
+
+          // Configurar los parámetros del email
+          const templateParams = {
+            from_name: name,
+            attendance: attendance,
+            message: `Confirmación de asistencia de ${attendance}`,
+          };
+
+          // Enviar el correo usando EmailJS
+          emailjs
+            .send("service_f7sxcyp", "template_5f05e55", templateParams)
+            .then(function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+
+              // Mostrar mensaje de éxito
+              alert("¡Gracias por confirmar tu asistencia!");
+            })
+            .catch(function (error) {
+              console.error("FAILED...", error);
+            });
+        });
+    </script>
+
+    <script>
+      // Inicializa EmailJS con tu User ID
+      emailjs.init({
+        publicKey: "CaMtCOGGOlFWE2dXC",
+      });
+
+      // Maneja el envío del formulario
+      document
+        .getElementById("mensaje")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita el comportamiento por defecto del formulario
+
+          const message = document.getElementById("message").value;
+
+          // Configurar los parámetros del email
+          const templateParams = {
+            message: message,
+          };
+
+          // Envia el formulario usando EmailJS
+          emailjs
+            .send("service_f7sxcyp", "template_yptbq66", templateParams)
+            .then(
+              function (response) {
+                console.log("Success:", response);
+                alert("Mensaje enviado con éxito");
+                document.getElementById("mensaje").reset(); // Opcional: limpia el formulario después del envío
+              },
+              function (error) {
+                console.error("Error:", error);
+                alert(
+                  "Hubo un error al enviar el mensaje. Inténtalo de nuevo."
+                );
+              }
+            );
+        });
     </script>
   </body>
 </html>
