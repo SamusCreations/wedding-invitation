@@ -163,7 +163,10 @@
 
     <div
       id="inicio"
-      style="background-image: url(images/inicio.jpg)"
+      style="
+        background-image: url(images/inicio.jpg);
+        -webkit-backface-visibility: hidden;
+      "
       class="relative grid grid-row min-h-svh bg-no-repeat bg-center bg-cover bg-fixed px-6 py-24 sm:py-32 lg:px-8"
     >
       <div class="min-h-svh absolute inset-0 bg-black/[.33] z-0"></div>
@@ -380,7 +383,9 @@
       <!-- Formulario para confirmar asistencia -->
       <div class="text-center text-ivory pt-8 uppercase text-2xl mx-2">
         <div>
-          <h3 class="text-5xl pb-4 font-serif">¿podrás acompañarnos?</h3>
+          <h3 class="text-4xl sm:text-5xl pb-4 font-serif">
+            ¿podrás acompañarnos?
+          </h3>
           <!-- Grupo de botones de radio para confirmar asistencia -->
           <div class="mb-4">
             <div class="flex justify-evenly gap-6">
@@ -405,7 +410,7 @@
             <input
               id="name"
               type="text"
-              class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs"
+              class="rounded-2xl px-2 mb-4 border border-gray-300 w-full max-w-xs text-green"
               required
             />
 
@@ -580,7 +585,7 @@
       class="grid min-h-full place-items-center bg-ivory px-6 py-8 sm:py-16 lg:px-8"
     >
       <div class="text-center text-green uppercase">
-        <h1 class="font-serif text-8xl">galería</h1>
+        <h1 class="font-serif text-7xl">galería</h1>
       </div>
     </div>
 
@@ -600,7 +605,7 @@
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
-            src="images/EXTRA2.jpg"
+            src="images/EXTRA2.jpeg"
             alt=""
           />
         </div>
@@ -636,10 +641,24 @@
         <div class="w-full max-w-lg aspect-w-1 aspect-h-1">
           <img
             class="w-full h-full object-cover"
-            src="images/EXTRA1.jpg"
+            src="images/foto1.jpg"
             alt=""
           />
         </div>
+      </div>
+
+      <div
+        class="w-full flex justify-center items-center md:col-span-2 lg:col-span-3 mt-10"
+      >
+        <iframe
+          class="w-full min-h-svh"
+          src="https://www.youtube.com/embed/WkkWviOgu38?si=15rVE_-zgqJmWKEC"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
 
       <div
@@ -761,7 +780,7 @@
             id="message"
             class="rounded-2xl px-4 m-4 border border-gray-300 w-full max-w-xl"
             rows="4"
-            placeholder="Escribe tu mensaje aquí..."
+            placeholder="Indica tu nombre al escribir tu mensaje aquí... "
             required
           ></textarea>
 
@@ -774,9 +793,7 @@
     </div>
 
     <footer>
-      <div
-        class="bg-lightGreen text-ivory text-xl text-center p-6"
-      >
+      <div class="bg-lightGreen text-ivory text-xl text-center p-6">
         <p>
           <small class="block">Fotografía Sara Romero</small>
           <small class="block">Diseño Web Samuel Romero</small>
