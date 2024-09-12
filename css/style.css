@@ -3,17 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+
   @font-face {
     font-family: "LouisGeorgeCafe";
-    src: url("/fonts/louis_george_cafe/Louis\ George\ Cafe.ttf")
-      format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    src: url("/fonts/LouisGeorgeCafe.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "LouisGeorgeCafeLight";
+    src: url("/fonts/LouisGeorgeCafeLight.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: "Koolegant";
-    src: url("/fonts/koolegant/Koolegant.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    src: url("/fonts/Koolegant.ttf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "BethanyElingston";
+    src: url("/fonts/BethanyElingston.otf") format("opentype"); /* O 'woff', 'woff2', etc. según el formato */
     font-weight: normal;
     font-style: normal;
   }
