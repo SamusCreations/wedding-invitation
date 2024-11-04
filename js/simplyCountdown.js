@@ -1,7 +1,7 @@
 (function (exports) {
   "use strict";
 
-  var extend, createCountdownElt, simplyCountdown;
+  var extend, simplyCountdown;
 
   // Función para combinar parámetros predeterminados con los personalizados
   extend = function (out) {

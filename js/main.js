@@ -163,26 +163,8 @@ document
       'input[name="attendance"]:checked'
     ).value;
 
-    // Configurar los parámetros del email
-    const templateParams = {
-      from_name: name,
-      attendance: attendance,
-      message: `Confirmación de asistencia de ${attendance}`,
-    };
-
-    // Enviar el correo usando EmailJS
-    emailjs
-      .send("service_f7sxcyp", "template_5f05e55", templateParams)
-      .then(function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-
-        // Mostrar mensaje de éxito
-        alert("¡Gracias por confirmar tu asistencia!");
-        document.getElementById("rsvpForm").reset();
-      })
-      .catch(function (error) {
-        console.error("FAILED...", error);
-      });
+    alert("¡Gracias por confirmar tu asistencia!");
+    document.getElementById("rsvpForm").reset();
   });
 
 // Message Form
@@ -191,21 +173,6 @@ document.getElementById("mensaje").addEventListener("submit", function (event) {
 
   const message = document.getElementById("message").value;
 
-  // Configurar los parámetros del email
-  const templateParams = {
-    message: message,
-  };
-
-  // Envia el formulario usando EmailJS
-  emailjs.send("service_f7sxcyp", "template_yptbq66", templateParams).then(
-    function (response) {
-      console.log("Success:", response);
-      alert("Mensaje enviado con éxito");
-      document.getElementById("mensaje").reset(); 
-    },
-    function (error) {
-      console.error("Error:", error);
-      alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-    }
-  );
+  alert("Mensaje enviado con éxito");
+  document.getElementById("mensaje").reset();
 });
